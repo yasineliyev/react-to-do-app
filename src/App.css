@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+    color: #fff;
+}
+.app h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* todoField */
+
+.todoField {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+}
+.todoField .todoField__btn {
+    color: #fff;
+    background-color: #0000ff;
+    border: 0;
+    height: 35px;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: all .2s linear;
+}
+.todoField .todoField__btn:hover {
+    background-color: #0000cc;
+}
+.todoField .todoField__input {
+    height: 35px;
+    border: 0;
+    padding: 0 10px;
+    outline: 0;
+}
+
+/* todos */
+
+.todos {
+    list-style-type: none;
+    padding: 0;
+    max-height: 350px;
+    overflow-y: auto;
+}
+.todos::-webkit-scrollbar {
+    width: 5px;
+    background-color: #eee;
+}
+.todos::-webkit-scrollbar-thumb {
+    background-color: coral;
+}
+.todos .todos__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.todos .todos__text {
+    font-size: 18px;
+}
+.todos .todos__text.todos__text--done {
+    text-decoration: line-through;
+}
+.todos .todos__buttons button {
+    margin-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+.todos .todos__buttons button[disabled] {
+    cursor: default;
+}
